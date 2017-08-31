@@ -3,7 +3,7 @@ workflow adlsAccessSet {
        param(
            [string]$adlspaths,
            [string]$subscriptionid,
-           [string]$tenantid,
+           [string]$tenantid
         )
     
        foreach -parallel ($path in $adlspaths){
