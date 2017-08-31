@@ -4,7 +4,8 @@ param(
 )
 Import-Module -Name AzureRM -Global
 Import-Module -Name AzureRM.Profile -Global
-Add-AzureRMAccount -ServicePrincipal -TenantId $tenantid -Credential System.Management.Automation.PSCredential -Environment AzureCloud
+$cred = System.Management.Automation.PSCredential
+Add-AzureRMAccount -ServicePrincipal -TenantId $tenantid -Credential $cred -Environment AzureCloud
 
 workflow adlsAccessSet {
     
@@ -26,7 +27,6 @@ workflow adlsAccessSet {
 
 #$paths = "Clarity_20150312","Cloud_Telemetry_production","Emoji_iOS_beta","Emoji_iOS_market", "Hexy_prod", "SwiftKey_Android_beta", "SwiftKey_Android_beta_20150422", "SwiftKey_Android_beta_RS0.9", "SwiftKey_Android_emoji", "SwiftKey_Android_emoji_beta", "SwiftKey_Android_nn", "SwiftKey_Android_prod", "SwiftKey_Android_prod_20150422", "SwiftKey_Android_shakespeare", "SwiftKey_Android_touch_data", "SwiftKey_iOS_beta", "SwiftKey_iOS_prod", "deblois-android-release"
 $paths = "Clarity_20150312","Cloud_Telemetry_production"
-$creds = System.Management.Automation.PSCredential
 adlsAccessSet  -adlspaths $paths -wftenantid $tenantid -wfsubscriptionid $subscriptionid
 
 
