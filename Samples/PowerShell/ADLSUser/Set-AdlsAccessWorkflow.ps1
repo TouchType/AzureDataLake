@@ -21,7 +21,7 @@ workflow adlsAccessSet {
         "$path"
         InlineScript
         {
-            "$path"
+            "$Using:path"
             $userName =$Using:sp_username
             $password = ConvertTo-SecureString $Using:sp_password -AsPlainText -Force
             $credential = New-Object System.Management.Automation.PSCredential($userName, $password)
