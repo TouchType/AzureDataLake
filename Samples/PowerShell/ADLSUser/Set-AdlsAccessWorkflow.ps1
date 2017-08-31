@@ -23,7 +23,8 @@ workflow adlsAccessSet {
 
 #$paths = "Clarity_20150312","Cloud_Telemetry_production","Emoji_iOS_beta","Emoji_iOS_market", "Hexy_prod", "SwiftKey_Android_beta", "SwiftKey_Android_beta_20150422", "SwiftKey_Android_beta_RS0.9", "SwiftKey_Android_emoji", "SwiftKey_Android_emoji_beta", "SwiftKey_Android_nn", "SwiftKey_Android_prod", "SwiftKey_Android_prod_20150422", "SwiftKey_Android_shakespeare", "SwiftKey_Android_touch_data", "SwiftKey_iOS_beta", "SwiftKey_iOS_prod", "deblois-android-release"
 $paths = "Clarity_20150312","Cloud_Telemetry_production"
-
+"$tenantid"
+"$subscriptionid"
 adlsAccessSet  -adlspaths $paths -wftenantid $tenantid -wfsubscriptionid $subscriptionid
 
 
