@@ -4,8 +4,7 @@ param(
 )
 Import-Module -Name AzureRM -Global
 Import-Module -Name AzureRM.Profile -Global
-$cred = System.Management.Automation.PSCredential
-Add-AzureRMAccount -ServicePrincipal -TenantId $tenantid -Credential $cred -Environment AzureCloud
+Add-AzureRMAccount -ServicePrincipal -TenantId $tenantid -Environment AzureCloud
 
 workflow adlsAccessSet {
     
