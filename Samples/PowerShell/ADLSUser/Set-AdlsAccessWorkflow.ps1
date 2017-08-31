@@ -7,6 +7,7 @@ workflow adlsAccessSet {
         "$path"
         InlineScript
         {
+        Login-AzureRMAccount
         C:\Users\skadmin\agent\_work\1\s\Samples\PowerShell\ADLSUser\Set-AdlsAccess.ps1 -Account analyticstelemetry -Path /app-telemetry/parquet_flat/$Using:path/ -EntityId 609efa91-4471-4a8f-b421-fce5286fba17 -EntityType Group -SetAclEntry -Permissions ReadExecute
         }
         } 
