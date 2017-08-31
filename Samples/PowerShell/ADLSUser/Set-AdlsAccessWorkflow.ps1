@@ -1,7 +1,7 @@
 workflow adlsAccessSet {
     
        param(
-           [string]$adlspaths,
+           [string][]$adlspaths,
            [string]$subscriptionid,
            [string]$tenantid
         )
