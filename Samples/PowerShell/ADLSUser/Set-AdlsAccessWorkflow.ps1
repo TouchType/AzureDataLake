@@ -9,7 +9,7 @@ workflow adlsAccessSet {
         InlineScript
         {
             "$path"
-            Samples/PowerShell/ADLSUser/Set-AdlsAccess.ps1 -Account analyticstelemetry -Path /app-telemetry/parquet_flat/SwiftKey_Android_prod/ -EntityId 609efa91-4471-4a8f-b421-fce5286fba17 -EntityType Group -SetAclEntry -Permissions ReadExecute
+            .\Samples/PowerShell/ADLSUser/Set-AdlsAccess.ps1 -Account analyticstelemetry -Path /app-telemetry/parquet_flat/SwiftKey_Android_prod/ -EntityId 609efa91-4471-4a8f-b421-fce5286fba17 -EntityType Group -SetAclEntry -Permissions ReadExecute
             # .\Set-AdlsAccess.ps1 -Account analyticstelemetry -Path /app-telemetry/parquet_flat/$Using:path/ -EntityId 609efa91-4471-4a8f-b421-fce5286fba17 -EntityType Group -SetAclEntry -Permissions ReadExecute
         }
         } 
