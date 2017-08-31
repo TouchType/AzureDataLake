@@ -8,8 +8,8 @@ workflow adlsAccessSet {
     
        foreach -parallel ($path in $adlspaths){
         "$path"
-        "$tenantid"
-        "$subscriptionid"
+        "$Using:tenantid"
+        "$Using:subscriptionid"
         InlineScript
         {
             Import-Module -Name AzureRM -Global
