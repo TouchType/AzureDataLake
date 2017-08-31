@@ -14,7 +14,7 @@ workflow adlsAccessSet {
             Import-Module -Name AzureRM.Profile -Global
             "$Using:tenantid"
             "$Using:subscriptionid"
-            # Add-AzureRMAccount -ServicePrincipal -TenantId $tenantid -Credential System.Management.Automation.PSCredential -Environment AzureCloud
+            Add-AzureRMAccount -ServicePrincipal -TenantId $Using:tenantid -Credential System.Management.Automation.PSCredential -Environment AzureCloud
             # Select-AzureRMSubscription -SubscriptionId $Using:subscriptionid -TenantId $Using:tenantid
             # .\Set-AdlsAccess.ps1 -Account analyticstelemetry -Path /app-telemetry/parquet_flat/$Using:path/ -EntityId 609efa91-4471-4a8f-b421-fce5286fba17 -EntityType Group -SetAclEntry -Permissions ReadExecute
         }
