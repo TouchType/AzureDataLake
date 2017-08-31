@@ -2,7 +2,7 @@ workflow adlsAccessSet {
     
        param([string[]]$adlspaths)
     
-       foreach –parallel ($path in $adlspaths){
+       foreach -parallel ($path in $adlspaths){
     
         "$path"
         # InlineScript
