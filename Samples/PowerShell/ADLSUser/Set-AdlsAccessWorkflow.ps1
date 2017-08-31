@@ -22,8 +22,8 @@ workflow adlsAccessSet {
         InlineScript
         {
             "$path"
-            $userName =$sp_username
-            $password = ConvertTo-SecureString $sp_password -AsPlainText -Force
+            $userName =$Using:sp_username
+            $password = ConvertTo-SecureString $Using:sp_password -AsPlainText -Force
             $credential = New-Object System.Management.Automation.PSCredential($userName, $password)
             # Login-AzureRmAccount -ServicePrincipal -ApplicationId  $sp_app_id -Credential $credential -TenantId $tenantid
             # C:\Users\skadmin\agent\_work\1\s\Samples\PowerShell\ADLSUser\Set-AdlsAccess.ps1 -Account analyticstelemetry -Path /app-telemetry/parquet_flat/SwiftKey_Android_prod/ -EntityId 609efa91-4471-4a8f-b421-fce5286fba17 -EntityType Group -SetAclEntry -Permissions ReadExecute
