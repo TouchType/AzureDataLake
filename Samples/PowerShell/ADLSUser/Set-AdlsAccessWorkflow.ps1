@@ -3,7 +3,7 @@ workflow adlsAccessSet {
        param([string[]]$adlspaths)
     
        foreach -parallel ($path in $adlspaths){
-    
+        Get-Variable
         "$path"
         InlineScript
         {
